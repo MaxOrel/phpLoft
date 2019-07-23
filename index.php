@@ -52,4 +52,47 @@ switch ($day) {
         echo "Неизвестный день";
 }
 
-$bmw = [model, speed, doors, year];
+
+$bmw = array(
+    'model' => 'X5',
+    'speed' => 120,
+    'doors' => 5,
+    'year' => '2015'
+);
+$toyota = array(
+    'model' => 'Rav4',
+    'speed' => 180,
+    'doors' => 6,
+    'year' => '2018'
+);
+$opel = array(
+    'model' => 'Astra',
+    'speed' => 180,
+    'doors' => 7,
+    'year' => '2019'
+);
+
+$car = array('bmw' => $bmw, 'toyota' => $toyota, 'opel' => $opel);
+
+
+foreach ($car as $key => $value) {
+    echo nl2br(PHP_EOL);
+    echo nl2br('CAR ' . $key . PHP_EOL);
+    foreach ($value as $k => $v) {
+        echo nl2br($v . ' ');
+    }
+};
+
+const ROW = 10;
+const COL = 10;
+
+$table = '<table border="1">';
+for ($tr = 1; $tr <= ROW; $tr++) {
+    $table .= '<tr>';
+    for ($td = 1; $td <= COL; $td++) {
+        $table .= '<td>'. $tr*$td .'</td>';
+    }
+    $table .= '</tr>';
+}
+$table .= '</table>';
+echo $table;
