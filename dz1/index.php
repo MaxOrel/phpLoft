@@ -5,9 +5,6 @@
  * PHP version 7.2
  * @author   Maxim Ivanov <maxim_91@inbox.ru>
  */
-
-require('src/function.php');
-
 $name = 'Максим';
 $age = '27';
 
@@ -104,21 +101,3 @@ for ($tr = 1; $tr <= ROW; $tr++) {
 }
 $table .= '</table>';
 echo $table;
-
-
-
-$arrayStr = array('Привет', 'Андрей', 'как', 'дела');
-printString($arrayStr);
-
-calcEverything('*', 1, 2, 3, 4, 5);
-
-printTable(9, 8);
-echo '<br>';
-
-printDate();
-
-textEdit('Карл у Клары украл Кораллы');
-
-textReplace('Две бутылки лимонада', 'Две', 'Три');
-
-createTxt('text.txt');
